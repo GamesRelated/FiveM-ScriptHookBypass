@@ -1,10 +1,8 @@
 #include "pch.h"
+#include "CustomAPI.h"
 #include <windows.h>
 #include <iostream>
 #include <thread>
-#include "CustomAPI.h"
-#include <Windows.h>
-#include <iostream>
 
 class metadataloader {
 public:
