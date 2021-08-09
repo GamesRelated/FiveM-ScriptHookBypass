@@ -17,7 +17,7 @@ using dofile_ptr_t = __int64(_fastcall*)(__int64, int, int, int, __int64, __int6
 using LoadFile_call = __int64(*)(__int64 metadataloader, const std::string& filename);
 dofile_ptr_t dofile_ptr = nullptr;
 
-void Bitizy() {
+void start() {
 
     LoadFile_call LoadFile = 0;
     while (!LoadFile)
@@ -64,7 +64,7 @@ BOOL APIENTRY DllMain(HMODULE hModule,
 )
 {
     if (ul_reason_for_call == DLL_PROCESS_ATTACH)
-        CreateThread(0, 0, (LPTHREAD_START_ROUTINE)Bitizy, 0, 0, 0);
+        CreateThread(0, 0, (LPTHREAD_START_ROUTINE)start, 0, 0, 0);
     return TRUE;
 }
 
